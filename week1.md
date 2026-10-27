@@ -95,3 +95,66 @@ graph LR
 
 ### 收获
 整理出一个可反复使用的提示词模板：[外贸询盘智能回复助手](templates/inquiry-reply-prompt.md)。
+
+### 三版迭代过程
+| 版本 | 我改了什么 | 结果 | 问题 |
+|---|---|---|---|
+| 第 1 版 | 角色 + 资料 + 五点角度 | 没编 LFGB，总价算对 | 输出太长（五大块） |
+| 第 2 版 | 加“只用以上资料，无资料反馈无资料，只输出邮件和翻译” | 短了一大半，一个没编 | 邮件里出现很多 "Information not available"，客户看了不专业 |
+| 第 3 版 | 缺失信息不写进邮件，单列待确认清单；客户问了没数据的写“正在确认” | 可以直接发 | 只剩落款和主题行要人工补 |
+
+### 今天最值钱的一课
+**“无数据”是写给自己看的，不是写给客户看的。**
+- 对内：缺什么列成清单，去补齐或找工厂确认。
+- 对外：客户没问的不写；问了但没数据的，写“正在核实，确认后回复”。
+- 提示词优化流程：写出来 → 看哪里不对 → 改规则 → 再跑一次。
+- AI 出初稿，人做最后把关：落款换成公司正式英文名 + 业务员名字 + 联系方式，并加主题行。
+
+### 最终版邮件（练习数据）
+```
+Subject: Quotation for Stainless Steel Pet Bowls – 2,000 pcs
+
+Dear Anna,
+
+Thank you for your inquiry and your interest in our stainless steel pet bowls.
+
+We are pleased to offer you the following quotation for your requested quantity of 2,000 pieces.
+
+Product Specifications
+- Product: Stainless Steel Pet Bowl
+- Size: M (18 cm diameter)
+- Material: 304 Stainless Steel
+- Feature: Non-slip rubber base
+
+Quotation & Trade Terms
+- Quantity: 2,000 pcs
+- Unit Price: USD 1.80/pc
+- Total Amount: USD 3,600.00
+- Trade Term: FOB Ningbo
+- MOQ: 1,000 pcs
+- Lead Time: 25 days after receipt of deposit
+- Payment Terms: T/T 30% deposit, 70% balance before shipment
+
+Certification
+We have FDA certification.
+Regarding your question about LFGB certification, we are currently checking the relevant information and will get back to you once it is confirmed.
+
+Thank you again for your interest. We look forward to your feedback and the opportunity to cooperate with you.
+
+Best regards,
+[业务员姓名]
+Sales Team, [公司正式英文名]
+[邮箱 / 电话]
+```
+
+### 待确认清单（内部使用）
+| 项目 | 状态 | 建议 |
+|---|---|---|
+| LFGB 认证 | 无数据 | **优先**确认是否有 LFGB 测试报告或证明文件 |
+| 产品颜色 | 无数据 | 确认可提供的颜色 |
+| 包装方式 | 无数据 | 确认单个包装、外箱规格 |
+| 联系人姓名 | 无数据 | 补充业务员姓名 |
+| 公司英文名 | 无数据 | 确认正式英文名称 |
+| 公司优势 | 无数据 | 确认是否工厂直供等 |
+| 报价有效期 | 无数据 | 确认价格有效截止日期 |
+| FDA 文件详情 | 有信息，未提供文件 | 核实文件类型、适用产品和有效性 |
